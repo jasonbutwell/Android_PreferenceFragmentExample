@@ -11,7 +11,7 @@
     tools:context="com.jasonbutwell.settingspreferencefragmentexample.MainActivity">
 
     <TextView
-        android:text="Sort movies by: "
+        android:text="@string/TextLabel_sort_movies_by"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -20,10 +20,10 @@
         android:id="@+id/textView" />
 
     <TextView
+        tools:text="hello world"
         android:id="@+id/tv_sortby_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hello world"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

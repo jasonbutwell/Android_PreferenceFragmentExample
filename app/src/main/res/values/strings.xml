@@ -12,5 +12,7 @@
 
     <string name="pref_sortby_label" translatable="false">Sort Movies by</string>
     <string name="pref_sortby_key" translatable="false">sortby</string>
+    <string name="menu_label_add_to_favourite">Add to favourite</string>
+    <string name="TextLabel_sort_movies_by">Sort movies by:</string>
 
 </resources>

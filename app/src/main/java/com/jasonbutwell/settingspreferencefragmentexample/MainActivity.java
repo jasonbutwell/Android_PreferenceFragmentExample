@@ -8,6 +8,7 @@ import android.support.v7.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
@@ -42,10 +43,16 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         int id = item.getItemId();
 
         // If action was the settings
-        if ( id == R.id.action_settings ){
+        if ( id == R.id.action_settings ) {
             startActivity(new Intent(this, SettingsActivity.class));
             return true;
         }
+        else
+            if ( id == R.id.action_favourite ) {
+                Toast.makeText(this, "You clicked the favourite star icon!",Toast.LENGTH_SHORT).show();
+                return true;
+            }
+
         return super.onOptionsItemSelected(item);
     }
 
