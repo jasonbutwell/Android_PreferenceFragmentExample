@@ -26,8 +26,9 @@ public class SettingsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
 
-        if (item.getItemId() == android.R.id.home)
+        if ( id == android.R.id.home)
             NavUtils.navigateUpFromSameTask(this);
 
         return super.onOptionsItemSelected(item);

@@ -1,8 +1,10 @@
 package com.jasonbutwell.settingspreferencefragmentexample;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -12,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
     }
 
     @Override
@@ -26,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
         // If action was the settings
         if ( id == R.id.action_settings ){
-            startActivity(new Intent(this, SettingsActivity.class));
+
+            Intent startSettingsActivity = new Intent(this, SettingsActivity.class);
+            startActivity(startSettingsActivity);
 
             return true;
         }
